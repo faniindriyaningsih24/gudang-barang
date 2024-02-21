@@ -542,7 +542,7 @@ def logout():
         confirm = input('Do you really want to logout? (Y/N) \t: ')
         confirm = confirm.upper()
         if confirm == 'Y':
-            print('__Thank You__')
+            print('__Thank You, Have a great day__')
             sys.exit()
         elif confirm == 'N':
             break
