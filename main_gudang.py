@@ -187,7 +187,7 @@ def create_data_barang():
     data_barang.append(new_data)
     print(f'__Data successfully added__')
     read_data_barang()
-    return
+    return data_barang
 
 # -------------------------EDIT DATA BARANG-------------------------
 def update_data_barang():
@@ -393,7 +393,7 @@ def opsi_sorting_databarang():
             read_data_barang()
             break
         elif select_no == 3:
-            data_barang = sorted(data_barang, key=lambda data : data['harga satuan(IDR)'])
+            data_barang = sorted(data_barang, key=lambda data : int(data['harga satuan(IDR)']))
             print('>> ASC Harga Satuan')
             read_data_barang()
             break
@@ -413,7 +413,7 @@ def opsi_sorting_databarang():
             read_data_barang()
             break
         elif select_no == 7:
-            data_barang = sorted(data_barang, key=lambda data : data['harga satuan(IDR)'], reverse=True)
+            data_barang = sorted(data_barang, key=lambda data : int(data['harga satuan(IDR)']), reverse=True)
             print('>> DESC Harga Satuan')
             read_data_barang()
             break
